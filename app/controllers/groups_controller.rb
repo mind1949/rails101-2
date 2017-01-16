@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
   end
 
   def new
-    @group = Group.new
+  @group = Group.new
   end
 
   def create
@@ -12,12 +12,11 @@ class GroupsController < ApplicationController
     @group.save
 
       redirect_to groups_path
-    end
+  end
 
-    private
+  private
 
-    def group_params
-      params.require(:group).permit(:title, :description)
-    end
-
+  def group_params
+    params.require(:group).permit(:title, :description)
+  end
 end

@@ -1,9 +1,3 @@
-class GroupsController < ApplicationController
-  def index
-    @groups = Group.all
-  end
-
-  def new
-    @group = Group.new
-  end
+class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
 end
